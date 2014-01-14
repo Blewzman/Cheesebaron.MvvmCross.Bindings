@@ -206,9 +206,6 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
                     // no template seen - so use a standard string view from Android and use ToString()
                     return GetSimpleView(convertView, source);
                 }
-
-                // no template seen - so use a standard string view from Android and use ToString()
-                return GetSimpleView(convertView, source);
             }
 
             // we have a templateid so lets use bind and inflate on it :)
