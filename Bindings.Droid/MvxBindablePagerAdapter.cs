@@ -198,7 +198,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
                     if (viewModelName.EndsWith(ViewModelSuffix, StringComparison.Ordinal))
                         viewModelName = viewModelName.Substring(0, viewModelName.Length - ViewModelSuffix.Length);
 
-                    templateId = this.Context.Resources.GetIdentifier((viewModelName + LayoutSuffix).ToLower(), "layout", this.Context.PackageName);
+                    templateId = this.Context.Resources.GetIdentifier(viewModelName.ToLower() + LayoutSuffix, "layout", this.Context.PackageName);
                 }
 
                 if (templateId == 0)
