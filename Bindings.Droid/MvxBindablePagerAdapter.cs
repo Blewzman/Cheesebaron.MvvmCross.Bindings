@@ -28,6 +28,7 @@ using Cirrious.MvvmCross.Binding.Attributes;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.ExtensionMethods;
+using Java.Lang;
 
 namespace Cheesebaron.MvvmCross.Bindings.Droid
 {
@@ -101,7 +102,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         {
             if (_itemsSource == value)
                 return;
-            
+
             if (_subscription != null)
             {
                 _subscription.Dispose();
@@ -238,14 +239,27 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         {
             return p0 == p1;
         }
-        
+
+        public override ICharSequence GetPageTitleFormatted(int position)
+        {
+            if (this.ItemsSource != null)
+            {
+                var vmTitle = this.GetRawItem(position) as IHasPageTitle;
+
+                if (vmTitle != null)
+                    return new Java.Lang.String(vmTitle.Title);
+            }
+
+            return base.GetPageTitleFormatted(position);
+        }
+
         // this as a simple non-performant fix for non-updating views - see http://stackoverflow.com/a/7287121/373321        
         public override int GetItemPosition(Java.Lang.Object obj)
         {
- 	         if (ReloadAllOnDataSetChange)
- 	             return PagerAdapter.PositionNone;
- 	             
- 	         return base.GetItemPosition(obj); 	         
+            if (ReloadAllOnDataSetChange)
+                return PagerAdapter.PositionNone;
+
+            return base.GetItemPosition(obj);
         }
     }
 }
