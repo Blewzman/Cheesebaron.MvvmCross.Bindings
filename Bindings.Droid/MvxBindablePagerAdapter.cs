@@ -41,8 +41,9 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         private IEnumerable _itemsSource;
         private IDisposable _subscription;
 
+        private const string ViewModelSuffix = "ViewModel";
+        private const string LayoutSuffix = "layout";
         public bool ReloadAllOnDataSetChange { get; set; }
-
         public MvxBindablePagerAdapter(Context context)
             : this(context, MvxAndroidBindingContextHelpers.Current())
         {
@@ -191,6 +192,21 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         {
             if (templateId == 0)
             {
+                if (source != null)
+                {
+                    var viewModelName = source.GetType().Name;
+                    if (viewModelName.EndsWith(ViewModelSuffix, StringComparison.Ordinal))
+                        viewModelName = viewModelName.Substring(0, viewModelName.Length - ViewModelSuffix.Length);
+
+                    templateId = this.Context.Resources.GetIdentifier((viewModelName + LayoutSuffix).ToLower(), "layout", this.Context.PackageName);
+                }
+
+                if (templateId == 0)
+                {
+                    // no template seen - so use a standard string view from Android and use ToString()
+                    return GetSimpleView(convertView, source);
+                }
+
                 // no template seen - so use a standard string view from Android and use ToString()
                 return GetSimpleView(convertView, source);
             }
@@ -256,10 +272,10 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         // this as a simple non-performant fix for non-updating views - see http://stackoverflow.com/a/7287121/373321        
         public override int GetItemPosition(Java.Lang.Object obj)
         {
-            if (ReloadAllOnDataSetChange)
-                return PagerAdapter.PositionNone;
+ 	         if (ReloadAllOnDataSetChange)
+ 	             return PagerAdapter.PositionNone;
 
             return base.GetItemPosition(obj);
-        }
+    }
     }
 }
