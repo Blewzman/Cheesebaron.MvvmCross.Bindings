@@ -15,8 +15,10 @@
 
 using System.Collections;
 using System.Windows.Input;
+using Android;
 using Android.Content;
 using Android.Util;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.Attributes;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 
@@ -25,6 +27,8 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
     public class BindableViewPager
         : Android.Support.V4.View.ViewPager
     {
+        private readonly int _initialIndex;
+
         public BindableViewPager(Context context, IAttributeSet attrs)
             : this(context, attrs, new MvxBindablePagerAdapter(context))
         { }
@@ -32,6 +36,8 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         public BindableViewPager(Context context, IAttributeSet attrs, MvxBindablePagerAdapter adapter)
             : base(context, attrs)
         {
+            this._initialIndex = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "selectedIndex", 0);
+
             var itemTemplateId = MvxAttributeHelpers.ReadListItemTemplateId(context, attrs);
             adapter.ItemTemplateId = itemTemplateId;
             Adapter = adapter;
@@ -60,7 +66,13 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         public IEnumerable ItemsSource
         {
             get { return Adapter.ItemsSource; }
-            set { Adapter.ItemsSource = value; }
+            set 
+            {
+                Adapter.ItemsSource = value;
+
+                if (value != null)
+                    this.SetCurrentItem(this._initialIndex, false);
+            }
         }
 
         public int ItemTemplateId
