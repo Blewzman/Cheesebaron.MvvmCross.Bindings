@@ -4,4 +4,9 @@
     android:id="@+id/viewPagerView"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    local:MvxBind="ItemsSource Items; ItemPageSelected ItemPageChangedCommand; PageSelected PageChangedCommand" />
+    local:MvxBind="ItemsSource Items; ItemPageSelected ItemPageChangedCommand; PageSelected PageChangedCommand">
+    <android.support.v4.view.PagerTabStrip
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+</BindableViewPager>

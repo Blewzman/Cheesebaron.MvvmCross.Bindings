@@ -1,9 +1,10 @@
-﻿using Cirrious.MvvmCross.ViewModels;
+﻿using Cheesebaron.MvvmCross.Bindings;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Sample.Core.ViewModels
 {
     public class SimpleViewModel
-        : MvxNotifyPropertyChanged
+        : MvxNotifyPropertyChanged, IHasPageTitle
     {
         private string _name;
         private string _description;
@@ -23,6 +24,14 @@ namespace Sample.Core.ViewModels
             {
                 _description = value;
                 RaisePropertyChanged(() => Description);
+            }
+        }
+
+        public string Title
+        {
+            get
+            {
+                return "Title of page " + this.Name;
             }
         }
     }
