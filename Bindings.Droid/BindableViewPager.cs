@@ -36,7 +36,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
         public BindableViewPager(Context context, IAttributeSet attrs, MvxBindablePagerAdapter adapter)
             : base(context, attrs)
         {
-            this._initialIndex = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "selectedIndex", 0);
+            this._initialIndex = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "selectedIndex", -1);
 
             var itemTemplateId = MvxAttributeHelpers.ReadListItemTemplateId(context, attrs);
             adapter.ItemTemplateId = itemTemplateId;
@@ -70,7 +70,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
             {
                 Adapter.ItemsSource = value;
 
-                if (value != null)
+                if ((value != null) && (this._initialIndex >= 0))
                     this.SetCurrentItem(this._initialIndex, false);
             }
         }
