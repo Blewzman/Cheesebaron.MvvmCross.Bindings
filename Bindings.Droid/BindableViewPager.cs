@@ -37,6 +37,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
             : base(context, attrs)
         {
             this._initialIndex = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "selectedIndex", -1);
+            this.OffscreenPageLimit = attrs.GetAttributeIntValue("http://schemas.android.com/apk/res-auto", "offscreenPageLimit", 1);
 
             var itemTemplateId = MvxAttributeHelpers.ReadListItemTemplateId(context, attrs);
             adapter.ItemTemplateId = itemTemplateId;

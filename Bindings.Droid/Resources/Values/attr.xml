@@ -2,5 +2,6 @@
 <resources>
   <declare-styleable name="BindableViewPager">
     <attr name="selectedIndex" format="integer" />
+    <attr name="offscreenPageLimit" format="integer" />
   </declare-styleable>
 </resources>
