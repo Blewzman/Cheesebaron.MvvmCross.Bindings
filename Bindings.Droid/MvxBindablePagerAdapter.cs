@@ -201,11 +201,8 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
                     templateId = this.Context.Resources.GetIdentifier(viewModelName.ToLower() + LayoutSuffix, "layout", this.Context.PackageName);
                 }
 
-                if (templateId == 0)
-                {
-                    // no template seen - so use a standard string view from Android and use ToString()
-                    return GetSimpleView(convertView, source);
-                }
+                // no template seen - so use a standard string view from Android and use ToString()
+                return GetSimpleView(convertView, source);
             }
 
             // we have a templateid so lets use bind and inflate on it :)
