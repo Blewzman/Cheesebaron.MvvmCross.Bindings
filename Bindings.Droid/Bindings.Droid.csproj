@@ -45,7 +45,6 @@
       <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
-    <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +53,10 @@
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindableViewPager.cs" />
@@ -68,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\attr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
