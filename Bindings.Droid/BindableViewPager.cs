@@ -96,7 +96,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
                 return;
 
             _itemPageSelectedOverloaded = true;
-            base.PageSelected += (sender, args) => ExecuteCommandOnItem(ItemPageSelected, args.P0);
+            base.PageSelected += (sender, args) => ExecuteCommandOnItem(ItemPageSelected, args.Position);
         }
 
         protected virtual void ExecuteCommandOnItem(ICommand command, int position)
@@ -128,7 +128,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
                 return;
 
             _pageSelectedOverloaded = true;
-            base.PageSelected += (sender, args) => ExecuteCommand(PageSelected, args.P0);
+            base.PageSelected += (sender, args) => ExecuteCommand(PageSelected, args.Position);
         }
 
         protected virtual void ExecuteCommand(ICommand command, int toPage)
