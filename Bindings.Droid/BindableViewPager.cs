@@ -17,6 +17,7 @@ using System.Collections;
 using System.Windows.Input;
 using Android;
 using Android.Content;
+using Android.Runtime;
 using Android.Util;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Binding.Attributes;
@@ -24,6 +25,7 @@ using Cirrious.MvvmCross.Binding.Droid.Views;
 
 namespace Cheesebaron.MvvmCross.Bindings.Droid
 {
+    [Register("cheesebaron.mvvmcross.bindings.droid.BindableViewPager")]
     public class BindableViewPager
         : Android.Support.V4.View.ViewPager
     {
