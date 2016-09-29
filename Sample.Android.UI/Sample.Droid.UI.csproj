@@ -20,7 +20,7 @@
     <MandroidI18n />
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion />
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <JavaMaximumHeapSize />
     <JavaOptions />
   </PropertyGroup>
