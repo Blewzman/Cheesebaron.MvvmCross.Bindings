@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Cheesebaron.MvvmCross.Bindings.Droid;
+using MvvmCross.Droid.Views;
 using Sample.Core.ViewModels;
-using Cirrious.MvvmCross.Droid.Views;
 
 namespace Sample.Droid.UI.Views
 {

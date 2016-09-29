@@ -20,15 +20,15 @@ using Android.Content;
 using Android.Support.V4.View;
 using Android.Views;
 using Android.Widget;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.CrossCore.Platform;
-using Cirrious.CrossCore.WeakSubscription;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.MvvmCross.Binding.Attributes;
-using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Binding.ExtensionMethods;
 using Java.Lang;
+using MvvmCross.Binding;
+using MvvmCross.Binding.Attributes;
+using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.Droid.Views;
+using MvvmCross.Binding.ExtensionMethods;
+using MvvmCross.Platform.Exceptions;
+using MvvmCross.Platform.Platform;
+using MvvmCross.Platform.WeakSubscription;
 
 namespace Cheesebaron.MvvmCross.Bindings.Droid
 {
@@ -178,7 +178,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
 
         protected virtual View CreateSimpleView(object source)
         {
-            var view = _bindingContext.LayoutInflater.LayoutInflater.Inflate(SimpleViewLayoutId, null);
+            var view = _bindingContext.LayoutInflaterHolder.LayoutInflater.Inflate(SimpleViewLayoutId, null);
             BindSimpleView(view, source);
             return view;
         }
@@ -229,7 +229,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
 
         protected virtual MvxListItemView CreateBindableView(object dataContext, int templateId)
         {
-            return new MvxListItemView(_context, _bindingContext.LayoutInflater, dataContext, templateId);
+            return new MvxListItemView(_context, _bindingContext.LayoutInflaterHolder, dataContext, templateId);
         }
 
         public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)

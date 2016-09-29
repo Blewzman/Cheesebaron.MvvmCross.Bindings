@@ -19,9 +19,8 @@ using Android;
 using Android.Content;
 using Android.Runtime;
 using Android.Util;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Binding.Attributes;
-using Cirrious.MvvmCross.Binding.Droid.Views;
+using MvvmCross.Binding.Attributes;
+using MvvmCross.Binding.Droid.Views;
 
 namespace Cheesebaron.MvvmCross.Bindings.Droid
 {

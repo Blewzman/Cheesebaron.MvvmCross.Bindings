@@ -1,5 +1,5 @@
 ﻿using Cheesebaron.MvvmCross.Bindings;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
 
 namespace Sample.Core.ViewModels
 {

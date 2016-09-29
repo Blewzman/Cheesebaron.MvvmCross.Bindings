@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Android.Content;
-using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Platform;
 using Sample.Core;
 
 namespace Sample.Droid.UI
@@ -20,13 +21,11 @@ namespace Sample.Droid.UI
             return new App();
         }
 
-        protected override IList<Assembly> AndroidViewAssemblies
+        protected override IEnumerable<Assembly> AndroidViewAssemblies
         {
             get 
             {
-                var assemblies = base.AndroidViewAssemblies;
-                assemblies.Add(typeof(Cheesebaron.MvvmCross.Bindings.Droid.BindableViewPager).Assembly);
-                return assemblies;
+                return base.AndroidViewAssemblies.Concat(new[] { typeof(Cheesebaron.MvvmCross.Bindings.Droid.BindableViewPager).Assembly });
             }
         }
     }
