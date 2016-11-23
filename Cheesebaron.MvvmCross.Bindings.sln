@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Droid.UI", "Sample.Android.UI\Sample.Droid.UI.csproj", "{A40394C0-035F-4BE3-977A-8C6E3B421112}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Core", "Sample.Core\Sample.Core.csproj", "{4C312177-0814-40F8-ADBC-6A0F0C92FD86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{E276CA46-09EF-41D9-9A7D-220A5EE8D684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bindings.Droid", "Bindings.Droid\Bindings.Droid.csproj", "{B7748ADC-59AE-4800-9DEA-91CE95C64D43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cheesebaron.MvvmCross.Bindings.Droid", "Cheesebaron.MvvmCross.Bindings.Droid\Cheesebaron.MvvmCross.Bindings.Droid.csproj", "{B7748ADC-59AE-4800-9DEA-91CE95C64D43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bindings", "Bindings\Bindings.csproj", "{7D4D9D1B-7073-442D-AA0A-B1983D5D0C31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cheesebaron.MvvmCross.Bindings", "Cheesebaron.MvvmCross.Bindings\Cheesebaron.MvvmCross.Bindings.csproj", "{7D4D9D1B-7073-442D-AA0A-B1983D5D0C31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

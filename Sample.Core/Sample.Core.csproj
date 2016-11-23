@@ -44,9 +44,9 @@
     <Compile Include="ViewModels\SimpleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bindings\Bindings.csproj">
+    <ProjectReference Include="..\Cheesebaron.MvvmCross.Bindings\Cheesebaron.MvvmCross.Bindings.csproj">
       <Project>{7d4d9d1b-7073-442d-aa0a-b1983d5d0c31}</Project>
-      <Name>Bindings</Name>
+      <Name>Cheesebaron.MvvmCross.Bindings</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

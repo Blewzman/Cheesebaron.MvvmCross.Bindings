@@ -132,13 +132,13 @@
     <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bindings.Droid\Bindings.Droid.csproj">
+    <ProjectReference Include="..\Cheesebaron.MvvmCross.Bindings.Droid\Cheesebaron.MvvmCross.Bindings.Droid.csproj">
       <Project>{b7748adc-59ae-4800-9dea-91ce95c64d43}</Project>
-      <Name>Bindings.Droid</Name>
+      <Name>Cheesebaron.MvvmCross.Bindings.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Bindings\Bindings.csproj">
+    <ProjectReference Include="..\Cheesebaron.MvvmCross.Bindings\Cheesebaron.MvvmCross.Bindings.csproj">
       <Project>{7d4d9d1b-7073-442d-aa0a-b1983d5d0c31}</Project>
-      <Name>Bindings</Name>
+      <Name>Cheesebaron.MvvmCross.Bindings</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sample.Core\Sample.Core.csproj">
       <Project>{4c312177-0814-40f8-adbc-6a0f0c92fd86}</Project>
