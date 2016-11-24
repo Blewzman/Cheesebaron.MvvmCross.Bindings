@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cheesebaron.MvvmCross.Bindings.Droid\Cheesebaron.MvvmCross.Bindings.Droid.csproj">
