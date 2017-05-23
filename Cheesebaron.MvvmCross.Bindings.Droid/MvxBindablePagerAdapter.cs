@@ -229,7 +229,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
 
         protected virtual MvxListItemView CreateBindableView(object dataContext, int templateId)
         {
-            return new MvxListItemView(_context, _bindingContext.LayoutInflaterHolder, dataContext, templateId);
+            return new MvxListItemView(_context, _bindingContext.LayoutInflaterHolder, dataContext, null, templateId);
         }
 
         public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
