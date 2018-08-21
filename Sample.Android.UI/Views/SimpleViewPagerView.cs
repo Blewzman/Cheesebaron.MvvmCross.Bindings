@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Cheesebaron.MvvmCross.Bindings.Droid;
-using MvvmCross.Droid.Views;
+using MvvmCross.Platforms.Android.Views;
 using Sample.Core.ViewModels;
 
 namespace Sample.Droid.UI.Views

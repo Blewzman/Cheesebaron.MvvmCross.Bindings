@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
+using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 
 namespace Sample.Core.ViewModels
 {
@@ -28,7 +28,7 @@ namespace Sample.Core.ViewModels
 
         private static void ShowItemPageChanged(SimpleViewModel toPage)
         {
-            MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage.Name);
+            //MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage.Name);
         }
 
         public ICommand ItemPageChangedCommand
@@ -38,7 +38,7 @@ namespace Sample.Core.ViewModels
 
         private static void ShowPageChanged(int toPage)
         {
-            MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage);
+            //MvxTrace.TaggedTrace("SimpleListViewModel", "Page changed to {0}", toPage);
         }
 
         public ICommand PageChangedCommand

@@ -1,4 +1,4 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.ViewModels;
 using Sample.Core.ViewModels;
 
 namespace Sample.Core
