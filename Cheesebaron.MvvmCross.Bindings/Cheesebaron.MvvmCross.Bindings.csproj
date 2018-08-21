@@ -21,13 +21,5 @@
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
   </ItemGroup>
   
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <None Remove="IHasPageTitle.cs" />
-  </ItemGroup>
-  
 </Project>
 
