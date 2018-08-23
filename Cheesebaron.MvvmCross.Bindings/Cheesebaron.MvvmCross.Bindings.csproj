@@ -5,7 +5,7 @@
     <AssemblyName>Cheesebaron.MvvmCross.Bindings</AssemblyName>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.0-beta01</Version>
+    <Version>3.0.0-beta02</Version>
   </PropertyGroup>
   
   <ItemGroup>
