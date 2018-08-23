@@ -219,7 +219,7 @@ namespace Cheesebaron.MvvmCross.Bindings.Droid
             else
                 BindBindableView(source, viewToUse);
 
-            return viewToUse as View;
+            return viewToUse?.Content;
         }
 
         protected virtual void BindBindableView(object source, IMvxListItemView viewToUse)
